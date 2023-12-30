@@ -1,12 +1,12 @@
 'use client'
 
-import React, {Fragment, useCallback, useState} from 'react'
-import {useForm} from 'react-hook-form'
+import React, { Fragment, useCallback, useState } from 'react'
+import { useForm } from 'react-hook-form'
 import Link from 'next/link'
 
-import {Button} from '../../../_components/Button'
-import {Input} from '../../../_components/Input'
-import {Message} from '../../../_components/Message'
+import { Button } from '../../../_components/Button'
+import { Input } from '../../../_components/Input'
+import { Message } from '../../../_components/Message'
 
 import classes from './index.module.scss'
 
@@ -21,7 +21,7 @@ export const RecoverPasswordForm: React.FC = () => {
   const {
     register,
     handleSubmit,
-    formState: {errors},
+    formState: { errors },
   } = useForm<FormData>()
 
   const onSubmit = useCallback(async (data: FormData) => {

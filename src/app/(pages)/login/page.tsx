@@ -32,7 +32,7 @@ export default async function Login() {
 
       <div className={classes.formWrapper}>
         <div className={classes.formContainer}>
-          <RenderParams className={classes.params}/>
+          <RenderParams className={classes.params} />
 
           <div className={classes.formTitle}>
             <h3>Welcome</h3>
