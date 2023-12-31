@@ -2,11 +2,12 @@
 @use './colors.scss' as *;
 @use './type.scss' as *;
 @import "./theme.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
 :root {
   --base: 24px;
-  --font-body: 'Jost', sans-serif;
-  --font-jost: 'Jost', sans-serif;
+  --font-body: 'Rubik', sans-serif;
+  --font-rubik: 'Rubik', sans-serif;
 
   --gutter-h: 180px;
   --block-padding: 120px;
@@ -45,7 +46,7 @@ body,
 }
 
 body {
-  font-family: var(--font-jost);
+  font-family: var(--font-rubik);
   margin: 0;
   padding: 0;
   color: var(--color-dark-500);

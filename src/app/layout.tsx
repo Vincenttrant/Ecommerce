@@ -1,6 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
-import { Jost } from 'next/font/google'
+import { Rubik } from 'next/font/google'
 
 import { AdminBar } from './_components/AdminBar'
 import { Footer } from './_components/Footer'
@@ -11,10 +11,10 @@ import { mergeOpenGraph } from './_utilities/mergeOpenGraph'
 
 import './_css/app.scss'
 
-const jost = Jost({
+const rubik = Rubik({
   subsets: ['latin-ext'],
   weight: ['400', '700'],
-  variable: '--font-jost',
+  variable: '--font-rubik',
 })
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
@@ -23,9 +23,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head>
         <InitTheme />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" type="image/svg+xml" />
+        <title>Vtoic</title>
       </head>
-      <body className={jost.variable}>
+      <body className={rubik.variable}>
         <Providers>
           <AdminBar />
           {/* @ts-expect-error */}

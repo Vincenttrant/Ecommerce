@@ -17,13 +17,14 @@ const HeaderComponent = ({ header }: { header: Header }) => {
 
   return (
     <nav
+      // Hides header on pages that don't need it (noHeaderFooterUrls)
       className={[classes.header, noHeaderFooterUrls.includes(pathname) && classes.hide]
         .filter(Boolean)
         .join(' ')}
     >
       <Gutter className={classes.wrap}>
         <Link href="/">
-          <Image src="/logo-black.svg" alt="logo" width={170} height={50} />
+          <Image src="/logo-black.png" alt="logo" width={100} height={40} />
         </Link>
 
         <HeaderNav header={header} />

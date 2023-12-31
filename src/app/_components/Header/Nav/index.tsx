@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { Header as HeaderType } from '../../../../payload/payload-types'
@@ -21,7 +22,14 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
         return <CMSLink key={i} {...link} appearance="none" />
       })}
       <CartLink />
-      {user && <Link href="/account">Account</Link>}
+      {/* Shows account when login */}
+      {user && (
+        <Link href="/account">
+          <Image src="/assets/icons/profile1.svg" alt="account" width={30} height={30} />
+        </Link>
+      )}
+
+      {/* Shows Login btn when logout */}
       {!user && (
         <Button
           el="link"
@@ -31,7 +39,6 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
           onClick={() => (window.location.href = '/login')}
         />
       )}
-      {user && <CartLink />}
     </nav>
   )
 }
