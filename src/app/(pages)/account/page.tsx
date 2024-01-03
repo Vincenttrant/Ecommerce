@@ -30,7 +30,7 @@ export default async function Account() {
         media={null}
         richText={[
           {
-            type: 'h1',
+            type: 'h3',
             children: [
               {
                 text: 'Account',
@@ -41,16 +41,7 @@ export default async function Account() {
             type: 'paragraph',
             children: [
               {
-                text: 'This is your account dashboard. Here you can update your account information, view your purchased products, and browse your order history. To manage all users, ',
-              },
-              {
-                type: 'link',
-                url: '/admin/collections/users',
-                children: [
-                  {
-                    text: 'login to the admin dashboard.',
-                  },
-                ],
+                text: 'This is your account dashboard. Here you can update your account information, view your purchased products, and browse your order history.',
               },
             ],
           },
@@ -59,12 +50,8 @@ export default async function Account() {
       <Gutter className={classes.account}>
         <AccountForm />
         <HR />
-        <h2>Purchased Products</h2>
-        <p>
-          These are the products you have purchased over time. This provides a way for you to access
-          digital assets or gated content behind a paywall. This is different from your orders,
-          which are directly associated with individual payments.
-        </p>
+        <h3>Purchased Products</h3>
+        <p className={classes.subtext}>These are the products you have purchased over time.</p>
         <div>
           {user?.purchases?.length || 0 > 0 ? (
             <ul className={classes.purchases}>
@@ -72,10 +59,12 @@ export default async function Account() {
                 return (
                   <li key={index} className={classes.purchase}>
                     {typeof purchase === 'string' ? (
-                      <p>{purchase}</p>
+                      <p className={classes.text}>{purchase}</p>
                     ) : (
                       <h4>
-                        <Link href={`/products/${purchase.slug}`}>{purchase.title}</Link>
+                        <Link href={`/products/${purchase.slug}`} className={classes.text}>
+                          {purchase.title}
+                        </Link>
                       </h4>
                     )}
                   </li>
@@ -87,8 +76,8 @@ export default async function Account() {
           )}
         </div>
         <HR />
-        <h2>Orders</h2>
-        <p>
+        <h3>Orders</h3>
+        <p className={classes.subtext}>
           These are the orders you have placed over time. Each order is associated with an payment
           intent. As you order products, they will appear in your "purchased products" list.
         </p>

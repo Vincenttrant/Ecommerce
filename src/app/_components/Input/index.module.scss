@@ -7,11 +7,12 @@
 .input {
   width: 100%;
   font-family: system-ui;
-  border-radius: 10px;
+  border-radius: 2px;
   box-shadow: none;
-  border: 1px solid var(--color-gray-500);
+  border: none;
+  border-bottom: 3px double var(--color-gray-100);
   background: none;
-  background-color: var(--theme-elevation-100);
+  background-color: var(--color-white-200);
   color: var(--theme-elevation-1000);
   height: 52px;
   line-height: calc(var(--base) * 2);
@@ -19,7 +20,8 @@
   font-size: 16px;
 
   &:focus {
-    border: none;
+    border-bottom: 3px double var(--theme-elevation-1000);
+    transition: 0.1s ease-in-out 100ms;
     outline: none;
   }
 

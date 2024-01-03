@@ -21,10 +21,10 @@ export default async function Login() {
       <div className={classes.heroImg}>
         <Link href="/">
           <Image
-            src="/logo-black.svg"
+            src="/logo-white.png"
             alt="logo"
-            width={250}
-            height={23}
+            width={100}
+            height={40}
             className={classes.logo}
           />
         </Link>
@@ -36,11 +36,10 @@ export default async function Login() {
 
           <div className={classes.formTitle}>
             <h3>Welcome</h3>
-            <Image src="/assets/icons/hand.png" alt="hand" width={30} height={50} />
           </div>
 
-          <p>Please login here</p>
-
+          <p>Enter Email Address & Password to login.</p>
+          <Image src="/assets/icons/arrow-down.svg" alt="arrow-down" width={25} height={25} />
           <LoginForm />
         </div>
       </div>

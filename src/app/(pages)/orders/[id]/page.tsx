@@ -47,8 +47,8 @@ export default async function Order({ params: { id } }) {
 
   return (
     <Gutter className={classes.orders}>
-      <h1>
-        {`Order`}
+      <h1 className={classes.orderTitle}>
+        {`Order: `}
         <span className={classes.id}>{`${order.id}`}</span>
       </h1>
       <div className={classes.itemMeta}>

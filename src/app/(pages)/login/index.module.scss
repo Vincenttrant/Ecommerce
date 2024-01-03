@@ -10,7 +10,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('/assets/images/image-1.svg');
+    background-image: url('/assets/images/background1.png');
+    background-color: var(--color-white-100);
   }
 
   p {
@@ -41,8 +42,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('/assets/images/image-1.svg');
-
+  background-image: url('/assets/images/background1.png');
   @include mid-break {
     background: none;
     display: flex;
@@ -52,13 +52,12 @@
 
 .logo {
   margin: 60px;
-  width: 30%;
+  width: auto;
   min-width: 150px;
   z-index: 10;
 
   @include mid-break {
-    width: 45%;
-    margin: 10px;
+    margin: 20px;
   }
 }
 
@@ -80,7 +79,7 @@
   max-width: 600px;
   width: 100%;
   padding: 50px;
-  border-radius: 10px;
+  border-radius: 2px;
 
   @include mid-break {
     backdrop-filter: blur(30px);
